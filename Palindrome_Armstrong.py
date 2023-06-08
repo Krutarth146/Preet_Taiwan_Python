@@ -79,4 +79,24 @@ if safe == rev:  # 101 == 101
 else:
     print("fail")
 
-# Plaindrome 1 to 10000 & ARmstrong 1 to 10000
+# Palindrome 1 to 10000 & ARmstrong 1 to 10000
+
+
+# Prime Numbers
+
+# 23 ---> 1 , 23
+# 29 ---> 1 , 29
+# 24 ---> 1, 2, 3, 4, 6, 8, 12, 24
+# 12 ---> 1, 2, 3, 4, 6, 12
+
+num = 30
+preet = 0
+
+for i in range(1,num+1):
+    if num % i == 0:
+        preet += 1
+
+print(preet)
+
+if preet == 2:
+    print("Prime Number")

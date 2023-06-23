@@ -36,3 +36,97 @@ print(str1.encode(encoding="ASCII", errors="ignore"))  # b'Stle'
 print(str1.encode(encoding="ASCII", errors="xmlcharrefreplace"))  # b'St&#229;le'
 print(str1.encode(encoding="ASCII", errors="backslashreplace"))  # b'St\\xe5le'
 print(str1.encode(encoding="latin"))  # b'St\xe5le'
+
+
+str1 = "LIon is the king the of the JUngle"
+
+str1 = str1.replace("the",'a',1)
+print(str1)   # LIon is a king of the JUngle
+
+
+list1 = str1.split()
+ 
+print(list1)  # ['LIon', 'is', 'a', 'king', 'the', 'of', 'the', 'JUngle']
+
+list1.reverse()
+for i in range(len(list1)):
+    if list1[i] == 'the':
+        list1[i] = 'a'
+        break
+print(list1)
+list1.reverse()
+print(list1)
+
+str1 = '_'.join(list1)
+print(str1)   # LIon is a king the of a JUngle
+
+str1 = "{} is the {} of Jungle123."
+print(str1.format("Lion", 'King'))   # Lion is the King of Jungle123.
+
+str1 = "{1} is the {0} of Jungle123."
+print(str1.format('King', 'Lion'))  # Lion is the King of Jungle123.
+
+str1 = "{animal} is the {designation} of Jungle123."
+print(str1.format(animal = "Lion", designation = "King"))  # Lion is the King of Jungle123.
+
+
+# Format_map
+
+dict1 = {'Designation' : "King" , 'Name' : "Tiger" }
+
+str1 = "{Name} is the {Designation} of Jungle123."
+print(str1.format_map(dict1))  # Tiger is the King of Jungle123.
+
+str1 = "Tiger"
+print(str1.isalnum())  # True
+print(str1.isalpha())
+print(str1.isascii())
+print(str1.isdecimal())
+print(str1.isdigit())
+print(str1.isnumeric())
+print(str1.isidentifier()) 
+print(str1.isspace()) 
+ 
+
+str1 = "Tiger is KIng of Jungle."
+print(len(str1))  # 24
+print(str1.ljust(40, '#'))
+print(str1.rjust(40, '#'))
+
+
+str1 = "               Tiger is KIng of Jungle.          "
+print(str1.lstrip())   # Tiger is KIng of Jungle.
+print(str1.rstrip())   #      Tiger is KIng of Jungle.
+print(str1.strip())   # Tiger is KIng of Jungle.
+
+str1 = "Tiger is KIng of Jungle."
+table = str1.maketrans("KIng", "kiNG", '.')
+print(table)  # {75: 107, 73: 105, 110: 78, 103: 71, 46: None}
+
+print(str1.translate(table))   # TiGer is kiNG of JuNGle
+
+print(str1.removeprefix('K'))   # Tiger is KIng of Jungle.
+print(str1.removesuffix('le.'))   # Tiger is KIng of Jung
+
+print(str1.startswith('Ti'))  # True
+str1 = "Tiger\nis\nKIng of Jungle."
+print(str1)
+
+# Tiger
+# is
+# KIng of Jungle.
+print(str1.splitlines())  # ['Tiger', 'is', 'KIng of Jungle.']
+
+print(str1.swapcase())   # kiNG OF jUNGLE.
+
+str2 = '900'
+print(str2.zfill(5))  # 00900
+
+print("%c" %'A')  # A
+print("%c" %67)  # C
+print("%s" %"Preet")  # Preet
+print("%d" % 78)   # 78
+print("%.2f" % 21.90)  # 21.90
+
+
+# String Methods End ----------------------------

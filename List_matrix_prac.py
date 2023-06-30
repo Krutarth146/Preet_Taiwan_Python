@@ -30,3 +30,15 @@ for row in range(len(d2)):  # 3  ---> 0 to 2
     d4.append(temp)
 
 print(d4)  # [[10, 21, 45], [55, 67, 78], [89, 89, 90]]
+
+choice = "patel"
+
+match choice:
+    case 0: print("Hello")
+
+    case 9.8 : pass
+    
+    case "patel": print("Enter Valid CHoice Patel")
+
+    case other: print("Enter Valid CHoice")
+    

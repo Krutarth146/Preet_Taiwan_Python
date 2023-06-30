@@ -51,3 +51,43 @@ lst2 = [20, 90, 78, 75, 43 , 21]
 
 list1 = [i for i in lst2 if i % 2 != 0]
 print(list1)   # [75, 43, 21]
+
+
+l2 = [[10,20,30], 
+      [40,50,60], 
+      [70,80,90]]
+
+
+for row in range(len(l2)):
+    for col in range(len(l2[row])):
+        print(l2[row][col],end=' ')
+    print()
+
+print()
+for row in range(len(l2)):
+    for col in range(len(l2[row])):
+        print(l2[col][row],end=' ')
+    print()
+
+
+l1 = [10,20,30,40,50,60]
+l2 = [50,90,232,45,21,23]
+
+# (10,50), (20,90) .....
+
+# for i,j in zip(l1,l2):
+#     print((i,j))
+
+l3 = [i for i in zip(l1,l2)]
+l3 = [i for i,j in zip(l1,l2) if j % 2 != 0]
+print(l3)
+
+
+l9 = [10,89,78,32,45,67,54,32,31]
+
+l10 = [i for i,j in enumerate(l9,100) if j % 2!=0 ]
+print(l10)  # [101, 104, 105, 108]
+
+
+exec("a=10\nb = 20\nc=a%b\nprint(c)")
+exec("x=int(input())\ny=int(input())\nprint(x+y)")

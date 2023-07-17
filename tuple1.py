@@ -50,4 +50,29 @@ for i in tup2:
 
 print(l1)  # [10, 89, 67]
 
-print(set(tup2))  # {89, 10, 67}  # Unordered, Don't Allow Duplicates
+print(set(tup2))  # {89, 10, 67}  # Unordered, Don't Allow Duplicates, Immutable (But we can add or remove elements.)
+
+
+list1 = [1,2,2,6,2,5,4,4,4,5,6,3,1,1]
+
+# 1 ---> [0...]
+# 2 ---> [1,2,4]    
+
+
+l2 = []
+for i in list1:
+    if i not in l2:
+        l2.append(i)
+
+print(l2)   # [1, 2, 6, 5, 4, 3]
+# print(list(set(list1)))  # [1, 2, 3, 4, 5, 6]
+
+for i in l2:
+    temp = []
+    for j in range(len(list1)):
+        if i == list1[j]:
+            temp.append(j)
+    print(i,' = ',temp)
+
+# List Compre.
+# index(list1[j], x)

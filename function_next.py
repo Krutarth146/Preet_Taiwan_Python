@@ -70,7 +70,7 @@ def Preet(f1):
     return Shah()
 
 
-@Preet    # Decorators
+@Preet    # Custom Decorators
 def Manoj():
     print("This is Manoj Function")
 

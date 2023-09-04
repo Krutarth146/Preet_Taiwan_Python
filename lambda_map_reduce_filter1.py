@@ -106,3 +106,69 @@ from itertools import accumulate
 
 sum_iter = list(accumulate(list1, lambda a,b : a+b))
 print(sum_iter)   # [10, 100, 178, 234, 266, 333]
+
+
+
+# -----------------------
+
+list1 = []
+
+for i in range(1,6):
+    list1.append(i)
+
+print(list1)
+
+list2 = [i for i in range(1,6)]  # list COmprehension
+print(list2)   # [1, 2, 3, 4, 5]
+
+
+list9 = [lambda preet = x : preet * 10 for x in range(1,6)]
+
+
+for item in list9:
+    print(item())
+
+
+list1 = [[10,90,30,40,90], [90,23,111,22], [90,32,45]]
+
+for sublist in list1:
+    # print(i)
+    print(max(sublist))
+
+for i in range(len(list1)):   # 3 ---> 0,1,2
+    for k in range(len(list1[i])): # 4  ---> 0,1,2,3
+        print(list1[i][k],end=' ')   # list1[0][2]
+    print()
+
+# List ---> append, Extend, Insert, pop(), pop(index), remove(element), copy, sort, reverse, count, index(element) 
+
+for sublist in list1:
+    sublist.sort()
+    print(sublist[-2])
+
+
+list1 = [30,90,45,78,12,12,78,12]
+
+
+# Method - 1
+unique = []
+
+
+for i in list1:
+    if i not in unique:
+        unique.append(i)
+print(unique)   # [30, 90, 45, 78, 12]
+
+# Method - 2
+
+print(list(set(list1)))  # [12, 45, 78, 90, 30]   # Unordered, Don't Allow Duplicates
+
+# Method - 3
+unique = []
+
+
+for ele in list1:
+    if list1.count(ele) == 1:
+        unique.append(ele)
+
+print(unique)
